@@ -41,7 +41,6 @@ fun OutActionsCell.verifyC5Actions(self, isExternal: bool): self {
 
         if (isExternal) {
             assert (outAction.sendMode & SEND_MODE_IGNORE_ERRORS) throw ERROR_EXTERNAL_SEND_MESSAGE_MUST_HAVE_IGNORE_ERRORS_SEND_MODE;
-            // assert (outAction.sendMode ^ SEND_MODE_DESTROY) throw ERROR_EXTERNAL_SEND_MESSAGE_MUST_HAVE_IGNORE_ERRORS_SEND_MODE;  // запрещаем удаление кошелька
         }
 
         cs = outAction.prev.beginParseAllowExotic();
