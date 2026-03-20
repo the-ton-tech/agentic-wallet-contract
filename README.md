@@ -40,6 +40,7 @@ The NFT item index is computed as `hash(ownerAddress, originOperatorPublicKey, d
 - The **user** (owner) can control the wallet via internal messages, acting as an irremovable extension.
 - The **user** can transfer control to a different agent by changing `operatorPublicKey`, or deactivate the agent entirely by setting `operatorPublicKey = 0`.
 - The **user** can update on-chain NFT content.
+- The **user** can add or remove wallet extensions at any time.
 - The wallet implements **TEP-85 SBT** operations: `prove_ownership` and `request_owner` for on-chain ownership proofs, with a bounce handler that forwards `ownership_proof_bounced` to the owner.
 - Standard SBT transfer, destroy, revoke, and take-excess opcodes are explicitly rejected.
 
